@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VISION LAB</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+</head>
+
+<body>
+    <header>
+        <div class="header-pont">VISION LAB</div>
+        <nav>
+            
+            <a href="#" onclick="navigate('home')">Home</a>
+            <a href="#" onclick="navigate('members')">Members</a>
+            <a href="#" onclick="navigate('research')">Research</a>
+            <a href="#" onclick="navigate('publication')">Publication</a>
+            <a href="#" onclick="navigate('photos')">Photos</a>
+            <img src="/image/image_white.png" alt="Search" class="search-icon" onclick="toggleSearch()" />
+            <div class="search-dropdown">
+                <input type="text" id="searchInput" placeholder="Search..." />
+                <button onclick="performSearch()">🔍</button>
+            </div>
+        </nav>
+    </header>
+    <div id="content" class="content">
+        <h1 class="header-title">Welcome to VISION LAB</h1>
+        <img src="/image/Icon_Bird_512x512.png" alt="Bird Drawing" style="max-width: 100%; height: auto" />
+    </div>
+
+    <script src="script.js"></script>
+        
+    
+</body>
+
+</html>
