@@ -5,20 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VISION LAB</title>
-    <link rel="stylesheet" href="style.css"> 
-    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <header>
-        <div class="header-pont">VISION LAB</div>
+        <div class="header-pont">
+            <a href="/" aria-label="VISION LAB">
+                <img src="/image/vision_lab_logo3.png" alt="VISION LAB" class="brand-logo">
+            </a>
+        </div>
         <nav>
-            
-            <a href="#" onclick="navigate('home')">Home</a>
-            <a href="#" onclick="navigate('members')">Members</a>
-            <a href="#" onclick="navigate('research')">Research</a>
-            <a href="#" onclick="navigate('publication')">Publication</a>
-            <a href="#" onclick="navigate('photos')">Photos</a>
+
+            <a href="#" class="menu-item" onclick="navigate('home')">Home</a>
+            <a href="#" class="menu-item" onclick="navigate('members')">Members</a>
+            <a href="#" class="menu-item" onclick="navigate('research')">Research</a>
+            <a href="#" class="menu-item" onclick="navigate('publication')">Publication</a>
+            <a href="#" class="menu-item" onclick="navigate('photos')">Photos</a>
             <img src="/image/image_white.png" alt="Search" class="search-icon" onclick="toggleSearch()" />
             <div class="search-dropdown">
                 <input type="text" id="searchInput" placeholder="Search..." />
@@ -27,13 +35,134 @@
         </nav>
     </header>
     <div id="content" class="content">
-        <h1 class="header-title">Welcome to VISION LAB</h1>
-        <img src="/image/Icon_Bird_512x512.png" alt="Bird Drawing" style="max-width: 100%; height: auto" />
-    </div>
+        <div class="background-overlay"></div>
+        <h1 class="header-title">VISION LAB</h1>
+        <h2 class="sub-header-title">Versatile Intelligent Sensor IC and ON-chip systems LAB</h2>
 
+    </div>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; margin: 5% 10%; gap: 40px;">
+        <!-- 이미지 영역 -->
+        <img src="/image/작은배경.png" alt="Bird Drawing"
+            style="flex: 1 1 250px; max-width: 300px; height: auto; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);" />
+
+        <!-- 텍스트 영역 -->
+        <div
+            style="flex: 2 1 400px; font-family: 'Segoe UI', sans-serif; line-height: 1.6; font-size: 16px; color: #333;">
+            <p class="info-text">
+                <strong>Our group</strong> focuses on creating intelligent vision sensor circuits and systems
+                that integrate CMOS vision sensor IC with spiking neural networks on a single-chip platform.
+            </p>
+            <p class="info-text">
+                <strong>VISION LAB</strong>에서는 CMOS 비전 센서 IC 설계와 스파이킹 신경망을 단일 칩 플랫폼에 통합하여
+                시각 정보를 직접 처리하는 지능형 비전 센서 회로 및 시스템 구현을 위해 연구한다. 이를 위해
+                LiDAR를 포함한 고성능 비전 센서 아키텍처와 mixed-signal SNN 회로, AI 학습 알고리즘, 광검출기 등
+                다양한 기술 분야를 연구하여 차세대 비전 센서 패러다임을 제시한다.
+            </p>
+            <p class="info-text" style="font-weight: bold; color: #0066cc;">
+                We invite you to browse our website to learn more about us and our research!
+            </p>
+
+        </div>
+
+        <div style="margin-left: 1%; width: 100%; text-align: center; font-family: 'Segoe UI', sans-serif;">
+            <hr><br>
+            <div style="font-size: 30pt; font-weight:bold;  ">Join VISION Lab!</div>
+            <p class="info-text">
+                VISION Lab에서는 함께 연구할 석/박사, 석박통합과정 학생들을 모집합니다.
+                학비 및 생활비 장학금을 지원합니다.
+                VISION Lab은 반도체 회로 분야 최고 학회인 <strong>ISSCC</strong>,
+                <strong>VLSI Symposium</strong>, <strong>JSSC</strong>를 비롯하여,
+                <strong>DAC, ICCAD</strong> 등 digital SoC 학회, <strong>AAAI, CVPR</strong> 등
+                computer science 분야 최고 학회, 더 나아가 nature 자매지까지 다양한 분야의
+                최고 수준 학술 활동을 목표로 합니다.
+            </p>
+            <p class="info-text">
+                창의적이고 열정적인 여러분과 함께 연구하여 지능형 비전 센서를 구현하고자 합니다.
+                LiDAR 센서, CMOS Image Sensor 등 비전 센서 IC 설계, 스파이킹 신경망 아키텍처,
+                mixed-signal 뉴로모픽 회로에 관심있는 학생들은 연락하세요.
+                (<a href="mailto:h.seo@pusan.ac.kr">h.seo@pusan.ac.kr</a>)
+            </p>
+            <p class="info-text">
+                VISION Lab is now open for creative and self-motivated students (M.S, Ph.D).
+                Please contact prof. Seo (<a href="mailto:h.seo@pusan.ac.kr">h.seo@pusan.ac.kr</a>)
+                for detailed information~!
+            </p>
+        </div>
+        <div style="margin-left: 1%; width: 100%; text-align: left; font-family: 'Segoe UI', sans-serif">
+            <hr><br><br>
+            <div style="font-size: 24pt; font-weight:bold; ">Recent News & Highlights</div>
+            <ul style="margin-bottom: 10pt 0;">
+
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">08/20/2025</span> [INVITED TALK] Prof.
+                    Seo gave an invited talk titled "Introduction to CMOS LiDAR Sensors" at RF Summer Conference.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">07/10/2025</span> [WORKSHOP] Prof. Seo
+                    and VISIONers participated in Korea Image Sensor Workshop at Dongguk University.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">07/07/2025</span> [INVITED TALK] Prof.
+                    Seo gave an invited talk titled "Overview of CMOS LiDAR Sensors" at IDEC PNU academy.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">07/01/2025</span> [RESEARCH] Woohyo
+                    Lee, Jiyeon Shin, Yeongjun Lee, Seung-gi Min, Jihyuk Park started development and research on
+                    "Mixed-signal Neuron & Synapse Circuits".</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">05/10/2025</span> [INVITED TALK] Prof.
+                    Seo gave an invited talk titled "Introduction to CMOS LiDAR Sensors" at SoC Conference, Daegu
+                    University.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">04/01/2025</span> [RESEARCH] Jeongmu
+                    Seo, San Kim, Donguk Kim started development and research on "Versatile scanning LiDAR Sensor
+                    compatible with both line type and array type sensors".</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">03/01/2025</span> [WELCOME] Seung-gi
+                    Min, Jihyuk Park joined VISION LAB for undergraduate internship.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">02/10/2025</span> [INVITED TALK] Prof.
+                    Seo gave an invited talk titled "Overview of CMOS LiDAR Sensors" at IDEC PNU campus.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">02/05/2025</span> [INVITED TALK] Prof.
+                    Seo gave an invited talk titled "Hardware Design for Artificial Intelligence" at Pusan National
+                    University.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">01/01/2025</span> [EXPERIENCE]
+                    Byeonghun Choi, Sihun Park, Byeong-eon Min started IC design on "PLL for bluetooth application".
+                </li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">01/04/2025</span> [INVITED TALK] Prof.
+                    Seo gave an invited talk titled "Introduction to CMOS LiDAR Sensors" at SOSLAB, Seongnam.</li>
+
+            </ul>
+            <br><hr><br><br>
+            <div style="font-size: 24pt; font-weight:bold">Past News & Highlights </div>
+            <ul>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">12/30/2024</span> [WELCOME] Youngjun
+                    Lee joined VISION LAB for undergraduate internship.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">12/12/2024</span> [INVITED TALK] Prof.
+                    Seo gave an invited talk titled "Introduction to CMOS LiDAR Sensors" at Ajou University.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">12/12/2024</span> [WELCOME] San Kim
+                    joined VISION LAB for undergraduate internship.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">12/04/2024</span> [WELCOME] Jeongmu
+                    Seo started pursuing Master's degree in VISION LAB.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">11/26/2024</span> [WELCOME] Sihun Park
+                    joined VISION LAB for undergraduate internship.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">11/26/2024</span> [WELCOME] Byeonghun
+                    Choi joined VISION LAB for undergraduate internship.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">09/01/2024</span> [WELCOME] Woohyo
+                    Lee, Jiyeon Shin, Donguk Kim, Sunghee Jin, Byeong-eon Min joined VISION LAB for undergraduate
+                    internship.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">09/01/2024</span> [LECTURE] Prof. Seo
+                    started giving lectures on "Logic Circuits" and "Circuit Theory I".</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">08/20/2024</span> [INVITED TALK] Prof.
+                    Seo gave an invited talk titled "CMOS Image Sensor Integrated Circuit Design" for the Semiconductor
+                    Engineering Track program.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">07-08/2024</span> [INVITED TALK] Prof.
+                    Seo gave an invited talk titled "Introduction to CMOS LiDAR Sensors" at SOSLAB, Seongnam.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">06/12/2024</span> [INVITED TALK] Prof.
+                    Seo delivered an invited talk titled "Introduction to CMOS LiDAR Sensors" at the Information and
+                    Communication Seminar, Sungkyunkwan University.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">03/01/2024</span> [LECTURE] Prof. Seo
+                    started giving lectures on "Logic Circuits" and "Circuit Theory II".</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">03/01/2024</span> [WELCOME] Prof. Seo
+                    joined Pusan National University and launched the VISION LAB!</li>
+            </ul>
+            
+        </div>
+
+
+    </div>
     <script src="script.js"></script>
-        
-    
+
+
 </body>
 
 </html>

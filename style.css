@@ -8,7 +8,7 @@ body {
 header {
     background-color: #003366;
     color: white;
-    padding: 15px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,19 +26,61 @@ nav a:hover {
 }
 
 .content {
+    position: relative; 
+    background: url('/image/큰배경.png') no-repeat center center; 
+    background-size: cover; 
+    height: 500px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    text-align: center;
     padding: 20px;
 }
 
+.background-overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    
+    z-index: 1; 
+}
+
+.sub-header-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    margin-top: 10px;
+    color: #ffffff;
+    z-index: 2; 
+}
+
+.menu-item {
+    font-family: 'Orbitron', sans-serif;
+}
+
 .header-title {
-    font-size: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 60px;
     font-weight: bold;
-    color: #003366;
+    color: #ffffff;
+    z-index: 2;
 }
 
 .header-pont {
+    
     font-size: 24px;
     font-weight: bold;
     color: #ffffff;
+}
+
+.brand-logo {
+  height: 36px;   /* 네비게이션 높이에 맞춰 조절 */
+  width: auto;    /* 비율 유지 */
+  display: block;
 }
 
 .line-size {
@@ -88,4 +130,43 @@ nav a:hover {
 .scholar-link:hover {
     text-decoration: underline; /* 마우스를 올리면 밑줄 표시 */
     color: blue; /* 링크 색상 변경 */
+}
+
+.news-section {
+  margin: 5% 10%;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.news-section h2 {
+  color: #003366;
+  margin: 30px 0 15px;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.news-section ul {
+  list-style: none;    /* 점 제거 */
+  padding: 0;
+}
+
+.news-section li {
+  margin-bottom: 10px;
+}
+
+.news-section strong {
+  color: #222;
+}
+
+.news-section em {
+  color: #444;
+  font-style: italic;
+}
+
+.info-text {
+    font-size: 20pt;
+    color: #333;
+    margin: 20px 0;
+    line-height: 1.5;
 }
