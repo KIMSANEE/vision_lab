@@ -166,7 +166,7 @@ nav a:hover {
 
 .info-title {
     font-family: 'Segoe UI', sans-serif;
-    font-size: 24pt;
+    font-size: 20pt;
     font-weight: bold;
     color: #333;
     line-height: 1.5;
@@ -174,7 +174,7 @@ nav a:hover {
 
 .info-text {
     font-family: 'Segoe UI', sans-serif;
-    font-size: 20pt;
+    font-size: 16pt;
     color: #333;
     margin: 20px 0;
     line-height: 1.5;
@@ -182,7 +182,7 @@ nav a:hover {
 
 .category-title {
     font-family: 'Segoe UI', sans-serif;
-    font-size: 30pt;
+    font-size: 26pt;
     text-align: left;
     margin-left: 7%;
     font-weight: bold;
@@ -192,7 +192,7 @@ nav a:hover {
 
 .subname-text {
     font-family: 'Segoe UI', sans-serif;
-    font-size: 16pt;
+    font-size: 12pt;
     color: #333;
     margin: 20px 0;
     line-height: 1.5;
