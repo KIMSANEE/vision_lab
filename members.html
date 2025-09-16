@@ -5,19 +5,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VISION LAB</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
     <header>
-        <div class="header-pont">VISION LAB</div>
+        <div class="header-pont">
+            <a href="/" aria-label="VISION LAB">
+                <img src="/image/vision_lab_logo3.png" alt="VISION LAB" class="brand-logo">
+            </a>
+        </div>
         <nav>
-            
-            <a href="#" onclick="navigate('home')">Home</a>
-            <a href="#" onclick="navigate('members')">Members</a>
-            <a href="#" onclick="navigate('research')">Research</a>
-            <a href="#" onclick="navigate('publication')">Publication</a>
-            <a href="#" onclick="navigate('photos')">Photos</a>
+
+            <a href="#" class="menu-item" onclick="navigate('home')">Home</a>
+            <a href="#" class="menu-item" onclick="navigate('members')">VISIONers</a>
+            <a href="#" class="menu-item" onclick="navigate('research')">Research</a>
+            <a href="#" class="menu-item" onclick="navigate('publication')">Publication</a>
+            <a href="#" class="menu-item" onclick="navigate('photos')">Photos</a>
             <img src="/image/image_white.png" alt="Search" class="search-icon" onclick="toggleSearch()" />
             <div class="search-dropdown">
                 <input type="text" id="searchInput" placeholder="Search..." />
@@ -25,32 +32,32 @@
             </div>
         </nav>
     </header>
-    <h1 style="text-align: left; margin-left: 7%;">Professor</h1>
+    <h1 class="category-title">Professor</h1>
     <div style="display:flex; margin-left: 10%">
         <div style="width: 20%;margin-left: 20px;text-align: left;">
             <img src="/image/서형석교수님.jpg" alt="photo" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; max-width: 300px; border-radius: 15px;" /> 
-            <br/><h2>서형석</h2>
-            <p>Hyeongseok Seo</p> <hr>
+            <br/><h1>서형석</h1>
+            <p class="subname-text">Hyeongseok Seo</p> <hr>
             <tr>
                 <td>
-                    <div style="display: flex; align-items: center;">
-                        <img src="/image/mail.jpg" alt="photo" style="height: 24px; margin-right: 8px;">
+                    <div class = "contact-text">
+                        <img src="/image/mail.jpg" alt="photo" style="height: 26px; margin-right: 4px;">
                         <span>h.seo@pusan.ac.kr</span>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <div style="display: flex; align-items: center;">
-                        <img src="/image/linkedin.jpg" alt="photo" style="height: 24px; margin-right: 8px;">
+                    <div class="contact-text">
+                        <img src="/image/linkedin.jpg" alt="photo" style="height: 26px; margin-right: 4px;">
                         <span><a href="https://www.linkedin.com/in/%ED%98%95%EC%84%9D-%EC%84%9C-4545b2194/?originalSubdomain=kr" class="scholar-link">linkedin</a></span>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <div style="display: flex; align-items: center;">
-                        <img src="/image/google.png" alt="photo" style="height: 24px; margin-right: 8px;">
+                    <div class="contact-text">
+                        <img src="/image/google.png" alt="photo" style="height: 26px; margin-right: 4px;">
                         <span><a href="https://scholar.google.co.kr/citations?hl=ko&user=sYmSuUQAAAAJ" class="scholar-link">google scholar</a></span>
                     </div>
                 </td>
@@ -58,68 +65,68 @@
             
         </div>
         <div style="margin-left: 1%; width: 70%; text-align: left;">
-            <div style="font-size: 20pt;">Profile</div>
+            <div class="info-title">Profile</div>
             <hr style="border:1px solid black;">
             <ul style="margin-bottom: 10pt 0;">
-                <li style="margin-bottom: 10px;"><span style="font-weight: bold;">2017</span> B.S.Department of Semiconductor Systems Engineering, Sungkyunkwan University</li>
-                <li style="margin-bottom: 10px;"><span style="font-weight: bold;">2022</span> Ph.D.Department of Electrical and Computer Engineering, Sungkyunkwan University</li>
-                <li style="margin-bottom: 10px;"><span style="font-weight: bold;">2021~2024</span> Team Leader, Next-Generation LiDAR Development Team, Solidvue</li>
-                <li style="margin-bottom: 10px;"><span style="font-weight: bold;">2024~</span> Assistant Professor, Department of Electrical and Computer Engineering, Pusan National University</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">2017</span> B.S.Department of Semiconductor Systems Engineering, Sungkyunkwan University</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">2022</span> Ph.D.Department of Electrical and Computer Engineering, Sungkyunkwan University</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">2021~2024</span> Team Leader, Next-Generation LiDAR Development Team, Solidvue</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">2024~</span> Assistant Professor, Department of Electrical and Computer Engineering, Pusan National University</li>
             </ul>
             
         </br></br></br></br></br>
-        <div style="font-size: 20pt;">Awards & Honors</div>
+        <div class="info-title">Awards & Honors</div>
             <hr style="border:1px solid black;">
             <ul style="margin-bottom: 10pt 0;">
-                <li style="margin-bottom: 10px;"><span style="font-weight: bold;">2021</span> Highlighted Paper Selection, Symposium on VLSI 2020</li>
-                <li style="margin-bottom: 10px;"><span style="font-weight: bold;">2020</span> Minister of Trade, Industry, and Energy Award, Korea Semiconductor Design Competition</li>
-                <li style="margin-bottom: 10px;"><span style="font-weight: bold;">2021</span> Outstanding Researcher Award, Samsung Electronics Strategic Industry-Academia Program</li>
-                <li style="margin-bottom: 10px;"><span style="font-weight: bold;">2020</span> Outstanding Researcher Award, Samsung Electronics Strategic Industry-Academia Program</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">2021</span> Highlighted Paper Selection, Symposium on VLSI 2020</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">2020</span> Minister of Trade, Industry, and Energy Award, Korea Semiconductor Design Competition</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">2021</span> Outstanding Researcher Award, Samsung Electronics Strategic Industry-Academia Program</li>
+                <li style="margin-bottom: 10px; font-size: 16pt"><span style="font-weight: bold;">2020</span> Outstanding Researcher Award, Samsung Electronics Strategic Industry-Academia Program</li>
             </ul>
 
             
         </br></br></br></br></br>
 
-        <div style="font-size: 20pt;">Representative Papers</div>
+        <div class="info-title">Representative Papers</div>
             <hr style="border:1px solid black;">
             <ul style="margin-bottom: 10pt 0;">
-                <li style="margin-bottom: 10px;">H. Seo*, H. Yoon, D. Kim, J. Kim, S.-J. Kim, J.-H. Chun, J. Choi, “Direct TOF scanning LiDAR sensor with two-step multievent histogramming TDC and embedded interference filter,” IEEE Journal of Solid-State Circuits (JSSC), Apr. 2021.</li>
-                <li style="margin-bottom: 10px;">M. Kim*, H. Seo*, S. Kim, J.-H. Chun, S.-J. Kim, J. Choi, “A 320x240 CMOS LiDAR Sensor with 6-transistor nMOS-only SPAD Analog Front-end and Area-efficient Priority Histogram Memory,” in International Solid-State Circuits Conference (ISSCC), 2024.</li>
-                <li style="margin-bottom: 10px;">H. Seo*, G. Cho*, J. Kim, J. Bae, S.-J. Kim, J.-H. Chun, J. Choi, "A CMOS LiDAR Sensor with Pre-Post Weighted-Histogramming for Sunlight Immunity Over 105 klx and SPAD-based Infinite Interference Canceling," in Symposium on VLSI Circuits (SOVC), Jun. 2021.</li>
-                <li style="margin-bottom: 10px;">H. Seo*, H. Yoon, D. Kim, J. Kim, S.-J. Kim, J.-H. Chun, J. Choi, "A 36-Channel SPAD-Integrated Scanning LiDAR Sensor with Multi-Event Histogramming TDC and Embedded Interference Filter," in Symposium on VLSI Circuits (SOVC), Jun. 2020 (Selected as a highlighted paper in SOVC 2020).</li>
-                <li style="margin-bottom: 10px;">H. Seo*, G. Cho, S.-J. Kim, J.-H. Chun, J. Choi, “Multievent Histogramming TDC with Pre-Post Weighted Histogramming Filter for CMOS LiDAR Sensors,” IEEE Sensors Journal, Nov. 2022.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt">H. Seo*, H. Yoon, D. Kim, J. Kim, S.-J. Kim, J.-H. Chun, J. Choi, “Direct TOF scanning LiDAR sensor with two-step multievent histogramming TDC and embedded interference filter,” IEEE Journal of Solid-State Circuits (JSSC), Apr. 2021.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt">M. Kim*, H. Seo*, S. Kim, J.-H. Chun, S.-J. Kim, J. Choi, “A 320x240 CMOS LiDAR Sensor with 6-transistor nMOS-only SPAD Analog Front-end and Area-efficient Priority Histogram Memory,” in International Solid-State Circuits Conference (ISSCC), 2024.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt">H. Seo*, G. Cho*, J. Kim, J. Bae, S.-J. Kim, J.-H. Chun, J. Choi, "A CMOS LiDAR Sensor with Pre-Post Weighted-Histogramming for Sunlight Immunity Over 105 klx and SPAD-based Infinite Interference Canceling," in Symposium on VLSI Circuits (SOVC), Jun. 2021.</li>
+                <li style="margin-bottom: 10px; font-size: 16pt">H. Seo*, H. Yoon, D. Kim, J. Kim, S.-J. Kim, J.-H. Chun, J. Choi, "A 36-Channel SPAD-Integrated Scanning LiDAR Sensor with Multi-Event Histogramming TDC and Embedded Interference Filter," in Symposium on VLSI Circuits (SOVC), Jun. 2020 (Selected as a highlighted paper in SOVC 2020).</li>
+                <li style="margin-bottom: 10px; font-size: 16pt">H. Seo*, G. Cho, S.-J. Kim, J.-H. Chun, J. Choi, “Multievent Histogramming TDC with Pre-Post Weighted Histogramming Filter for CMOS LiDAR Sensors,” IEEE Sensors Journal, Nov. 2022.</li>
             </ul>
         
         </br></br></br></br></br>
         </div>
         
     </div>
-    <h1 style="text-align: left; margin-left: 7%; margin-right: 20px;">M.S Students</h1>
+    <h1 class="category-title">M.S Students</h1>
     <div style="display:flex; margin-left: 10%">
         <div style="width: 20%;margin-left: 20px; margin-right: 20px; text-align: left;">
             <img src="/image/서정무2.jpg" alt="photo" style="width: 100%; aspect-ratio: 1/1.2; object-fit: cover; max-width: 300px ; border-radius: 15px;" /> 
-            <br/><h2>서정무</h2>
-            <p>JungMu Seo</p> <hr>
+            <br/><h1>서정무</h1>
+            <p class="subname-text">JungMu Seo</p> <hr>
             <tr>
                 <td>
-                    <div style="display: flex; align-items: center;">
-                        <img src="/image/mail.jpg" alt="photo" style="height: 24px; margin-right: 8px;">
+                    <div class = "contact-text">
+                        <img src="/image/mail.jpg" alt="photo" style="height: 26px; margin-right: 4px;">
                         <span>202583324@pusan.ac.kr</span>
                     </div>
                 </td>
             </tr>
         </div>
     </div>
-    <h1 style="text-align: left; margin-left: 7%; margin-right: 20px;">Undergraduate Students</h1>
+    <h1 class="category-title">Undergraduate Students</h1>
     <div style="display:flex; margin-left: 10%">
         <div style="width: 20%;margin-left: 20px; margin-right: 20px; text-align: left;">
             <img src="/image/김동욱.png" alt="photo" style="width: 100%; aspect-ratio: 1/1.2; object-fit: cover; max-width: 300px ; border-radius: 15px;" /> 
-            <br/><h2>김동욱</h2>
-            <p>DongUk Kim</p> <hr>
+            <br/><h1>김동욱</h1>
+            <p class="subname-text">DongUk Kim</p> <hr>
             <tr>
                 <td>
-                    <div style="display: flex; align-items: center;">
-                        <img src="/image/mail.jpg" alt="photo" style="height: 24px; margin-right: 8px;">
+                    <div class="contact-text">
+                        <img src="/image/mail.jpg" alt="photo" style="height: 26px; margin-right: 4px;">
                         <span>kimdudu@pusan.ac.kr</span>
                     </div>
                 </td>
@@ -127,12 +134,12 @@
         </div>
         <div style="width: 20%;margin-left: 20px; margin-right: 20px; text-align: left;">
             <img src="/image/김산2.jpg" alt="photo" style="width: 100%; aspect-ratio: 1/1.2; object-fit: cover; max-width: 300px ; border-radius: 15px;" /> 
-            <br/><h2>김산</h2>
-            <p>San Kim</p> <hr>
+            <br/><h1>김산</h1>
+            <p class="subname-text">San Kim</p> <hr>
             <tr>
                 <td>
-                    <div style="display: flex; align-items: center;">
-                        <img src="/image/mail.jpg" alt="photo" style="height: 24px; margin-right: 8px;">
+                    <div class="contact-text">
+                        <img src="/image/mail.jpg" alt="photo" style="height: 26px; margin-right: 4px;">
                         <span>rlatks0923@pusan.ac.kr</span>
                     </div>
                 </td>
@@ -140,12 +147,12 @@
         </div>
         <div style="width: 20%;margin-left: 20px; margin-right: 20px; text-align: left;">
             <img src="/image/민병언.png" alt="photo" style="width: 100%; aspect-ratio: 1/1.2; object-fit: cover; max-width: 300px ; border-radius: 15px;" /> 
-            <br/><h2>민병언</h2>
-            <p>ByeoungEon Min</p> <hr>
+            <br/><h1>민병언</h1>
+            <p class="subname-text">ByeoungEon Min</p> <hr>
             <tr>
                 <td>
-                    <div style="display: flex; align-items: center;">
-                        <img src="/image/mail.jpg" alt="photo" style="height: 24px; margin-right: 8px;">
+                    <div class="contact-text">
+                        <img src="/image/mail.jpg" alt="photo" style="height: 26px; margin-right: 4px;">
                         <span>1923372@donga.ac.kr</span>
                     </div>
                 </td>
@@ -153,12 +160,12 @@
         </div>
         <div style="width: 20%;margin-left: 20px; margin-right: 20px; text-align: left;">
             <img src="/image/신지연2.jpg" alt="photo" style="width: 100%; aspect-ratio: 1/1.2; object-fit: cover; max-width: 300px ; border-radius: 15px;" /> 
-            <br/><h2>신지연</h2>
-            <p>JiYeon Shin</p> <hr>
+            <br/><h1>신지연</h1>
+            <p class="subname-text">JiYeon Shin</p> <hr>
             <tr>
                 <td>
-                    <div style="display: flex; align-items: center;">
-                        <img src="/image/mail.jpg" alt="photo" style="height: 24px; margin-right: 8px;">
+                    <div class="contact-text">
+                        <img src="/image/mail.jpg" alt="photo" style="height: 26px; margin-right: 4px;">
                         <span>tls1089@pusan.ac.kr</span>
                     </div>
                 </td>
@@ -169,12 +176,12 @@
     <div style="display:flex; margin-left: 10%">
         <div style="width: 20%;margin-left: 20px; margin-right: 20px; text-align: left;">
             <img src="/image/이우효2.jpg" alt="photo" style="width: 100%; aspect-ratio: 1/1.2; object-fit: cover; max-width: 300px ; border-radius: 15px;" /> 
-            <br/><h2>이우효</h2>
-            <p>Woo-hyo Lee</p> <hr>
+            <br/><h1>이우효</h1>
+            <p class="subname-text">Woo-hyo Lee</p> <hr>
             <tr>
                 <td>
-                    <div style="display: flex; align-items: center;">
-                        <img src="/image/mail.jpg" alt="photo" style="height: 24px; margin-right: 8px;">
+                    <div class="contact-text">
+                        <img src="/image/mail.jpg" alt="photo" style="height: 26px; margin-right: 4px;">
                         <span>whlee0420@pusan.ac.kr</span>
                     </div>
                 </td>
@@ -182,12 +189,12 @@
         </div>
         <div style="width: 20%;margin-left: 20px; margin-right: 20px; text-align: left;">
             <img src="/image/진성희.png" alt="photo" style="width: 100%; aspect-ratio: 1/1.2; object-fit: cover; max-width: 300px ; border-radius: 15px;" /> 
-            <br/><h2>진성희</h2>
-            <p>Seong-hui Jin</p> <hr>
+            <br/><h1>진성희</h1>
+            <p class="subname-text">Seong-hui Jin</p> <hr>
             <tr>
                 <td>
-                    <div style="display: flex; align-items: center;">
-                        <img src="/image/mail.jpg" alt="photo" style="height: 24px; margin-right: 8px;">
+                    <div class="contact-text">
+                        <img src="/image/mail.jpg" alt="photo" style="height: 26px; margin-right: 4px;">
                         <span>1923372@donga.ac.kr</span>
                     </div>
                 </td>
@@ -195,12 +202,12 @@
         </div>
         <div style="width: 20%;margin-left: 20px; margin-right: 20px; text-align: left;">
             <img src="/image/이영준.jpg" alt="photo" style="width: 100%; aspect-ratio: 1/1.2; object-fit: cover; max-width: 300px; border-radius: 15px;" /> 
-            <br/><h2>이영준</h2>
-            <p>YoungJun Lee</p> <hr>
+            <br/><h1>이영준</h1>
+            <p class="subname-text">YoungJun Lee</p> <hr>
             <tr>
                 <td>
-                    <div style="display: flex; align-items: center;">
-                        <img src="/image/mail.jpg" alt="photo" style="height: 24px; margin-right: 8px;">
+                    <div class="contact-text">
+                        <img src="/image/mail.jpg" alt="photo" style="height: 26px; margin-right: 4px;">
                         <span>lyj991022@naver.com</span>
                     </div>
                 </td>
@@ -208,12 +215,12 @@
         </div>
         <div style="width: 20%;margin-left: 20px; margin-right: 20px; text-align: left;">
             <img src="/image/서형석교수님.jpg" alt="photo" style="width: 100%; aspect-ratio: 1/1.2; object-fit: cover; max-width: 300px; border-radius: 15px;" /> 
-            <br/><h2>최병훈</h2>
-            <p>ByeongHun Choi</p> <hr>
+            <br/><h1>최병훈</h1>
+            <p class="subname-text">ByeongHun Choi</p> <hr>
             <tr>
                 <td>
-                    <div style="display: flex; align-items: center;">
-                        <img src="/image/mail.jpg" alt="photo" style="height: 24px; margin-right: 8px;">
+                    <div class="contact-text">
+                        <img src="/image/mail.jpg" alt="photo" style="height: 26px; margin-right: 4px;">
                         <span>1923372@donga.ac.kr</span>
                     </div>
                 </td>
