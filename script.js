@@ -1,36 +1,65 @@
-function navigate(page) {
-    let content = document.getElementById("content");
-    switch (page) {
-        case "home":
-            window.location.href = "index.html";
-            break;
-        case "members":
-            window.location.href = "members.html";
-            break;
-        case "research":
-            window.location.href = "research.html";
-            break;
-        case "publication":
-            window.location.href = "publication.html";
-            break;
-        case "photos":
-            window.location.href = "photos.html";
-            break;
+// Sticky header shadow on scroll
+const header = document.getElementById('site-header');
+const onScroll = () => {
+  if (window.scrollY > 6) header.style.boxShadow = '0 6px 22px rgba(2,6,23,.06)';
+  else header.style.boxShadow = 'none';
+};
+window.addEventListener('scroll', onScroll); onScroll();
+
+// Smooth anchor scroll (native behavior + offset fix for old browsers if needed)
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const id = a.getAttribute('href');
+    if (!id || id === '#') return;
+    const el = document.querySelector(id);
+    if (el){
+      e.preventDefault();
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+      // close drawer if open
+      drawer.classList.remove('open');
     }
-}
-document.addEventListener("DOMContentLoaded", function () {
-    let searchIcon = document.querySelector(".search-icon");
-    let dropdown = document.querySelector(".search-dropdown");
-
-    searchIcon.addEventListener("click", function (event) {
-        event.stopPropagation(); // 상위 요소로 이벤트 전파 방지
-        dropdown.style.display = "block"; // 검색창 보이기
-    });
-
-    document.addEventListener("click", function (event) {
-        // 드롭다운 내부 클릭 시 유지, 외부 클릭 시 닫기
-        if (!dropdown.contains(event.target) && event.target !== searchIcon) {
-            dropdown.style.display = "none";
-        }
-    });
+  });
 });
+
+// Search dropdown toggle
+const searchBtn = document.getElementById('searchBtn');
+const searchDropdown = document.getElementById('searchDropdown');
+const searchGo = document.getElementById('searchGo');
+searchBtn.addEventListener('click', ()=>{
+  searchDropdown.classList.toggle('open');
+  const input = document.getElementById('searchInput');
+  if (searchDropdown.classList.contains('open')) input?.focus();
+});
+document.addEventListener('click', (e)=>{
+  if (!searchDropdown.contains(e.target) && e.target !== searchBtn){
+    searchDropdown.classList.remove('open');
+  }
+});
+searchGo.addEventListener('click', ()=>{
+  const q = (document.getElementById('searchInput').value || '').trim();
+  if (q) window.find ? window.find(q) : alert(`Search: ${q}`);
+});
+
+// Mobile drawer
+const drawer = document.getElementById('drawer');
+const menuToggle = document.getElementById('menuToggle');
+const drawerClose = document.getElementById('drawerClose');
+menuToggle.addEventListener('click', ()=> drawer.classList.add('open'));
+drawerClose.addEventListener('click', ()=> drawer.classList.remove('open'));
+drawer.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> drawer.classList.remove('open')));
+
+// Year in footer
+document.getElementById('year').textContent = new Date().getFullYear();
+const vids = document.querySelectorAll('video[autoplay]');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.play();
+      else e.target.pause();
+    });
+  }, { threshold: 0.5 });
+
+  vids.forEach(v => {
+    v.muted = true;            // 자동재생을 위해 보장
+    v.playsInline = true;      // iOS 전체화면 방지
+    io.observe(v);
+  });
