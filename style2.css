@@ -306,15 +306,12 @@ body{
 .card{
   background:#fff; border:1px solid #e5e7eb; border-radius:12px;
   padding:14px 16px; box-shadow:0 4px 12px rgba(0,0,0,.04);
+  
+  
 }
-
-.bullet{ margin: 0; padding-left: 18px; line-height: 1.7; }
-.bullet li{ margin: 4px 0;} 
-
-.card-title{ font-size:20px; font-weight:800; margin:2px 0 8px; }
-.card-contents{ font-size:16px; margin:2px 0 8px; text-indent: 1ch; line-height: 1.7;}
+.card-title{ font-size:18px; font-weight:800; margin:2px 0 8px; }
 .muted{ color:#6b7280; font-size:16px; }
-
+.card-contents{ color:#000000; font-size:30px; }
 /* 프로젝트 타이틀/배지 */
 .project{ margin:26px 0 10px; }
 .project-title{ font-size:20px; font-weight:900; margin:8px 0 12px; }
