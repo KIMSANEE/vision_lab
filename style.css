@@ -205,3 +205,11 @@ nav a:hover {
     align-items: center;
 }
 
+.banner{
+  width: 100%;
+  max-width: 1200px;     /* 필요 시 조절 */
+  height: 300px;         /* 배너 높이 */
+  /*border-radius: 10px;*/
+  overflow: hidden;
+}
+

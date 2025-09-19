@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VISION LAB.</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Orbitron은 로고/헤더에만 사용, 본문은 Inter로 -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@600;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+  <!-- Header / Nav -->
+  <header id="site-header" class="header">
+    <div class="header-inner">
+      <a href="#home" class="brand" aria-label="VISION LAB">
+        <span class="brand-text">VISION LAB.</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#home" class="menu-item">Home</a>
+        <a href="#members" class="menu-item">VISIONers</a>
+        <a href="#research" class="menu-item">Research</a>
+        <a href="#publication" class="menu-item">Publication</a>
+        <a href="#photos" class="menu-item">Photos</a>
+
+        <button class="search-btn" id="searchBtn" aria-label="Search">
+          🔍
+        </button>
+        <div class="search-dropdown" id="searchDropdown" role="dialog" aria-modal="false">
+          <input type="text" id="searchInput" placeholder="Search…" />
+          <button id="searchGo">Go</button>
+        </div>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <strong>Menu</strong>
+      <button id="drawerClose" aria-label="Close">✕</button>
+    </div>
+    <nav class="drawer-links">
+      <a href="#home" class="drawer-link">Home</a>
+      <a href="#members" class="drawer-link">VISIONers</a>
+      <a href="#research" class="drawer-link">Research</a>
+      <a href="#publication" class="drawer-link">Publication</a>
+      <a href="#photos" class="drawer-link">Photos</a>
+    </nav>
+  </aside>
+
+  <!-- Hero -->
+  <main id="home">
+    <section class="hero">
+      <h1 class="hero-title"><span>VISION LAB.</span></h1>
+      <p class="hero-sub">Versatile Intelligent Sensor IC and On-chip Systems Lab</p>
+    </section>
+
+    <!-- Intro -->
+    <section class="intro container">
+      <img src="/image/작은배경.png" alt="Vision IC" class="intro-img" />
+
+      <div class="intro-text">
+        <p>
+          Our group focuses on creating <strong>intelligent vision sensor circuits and systems</strong>
+          that integrate CMOS vision sensor IC with spiking neural networks on a single-chip platform.
+        </p>
+        <p>
+          <strong>VISION LAB</strong>에서는 CMOS 비전 센서 IC 설계와 스파이킹 신경망을 단일 칩 플랫폼에 통합하여
+          시각 정보를 직접 처리하는 <strong>지능형 비전 센서 회로 및 시스템</strong> 구현을 위해 연구한다. 이를 위해
+          LiDAR를 포함한 고성능 비전 센서 아키텍처와 mixed-signal SNN 회로, AI 학습 알고리즘, 광검출기 등
+          다양한 기술 분야를 연구하여 <strong>차세대 비전 센서 패러다임을 제시</strong>한다.
+        </p>
+        <p class="callout">
+          We invite you to browse our website to learn more about us and our research!
+        </p>
+      </div>
+    </section>
+
+    <!-- Call for students -->
+    <section class="container">
+      <hr class="section-divider" />
+      <h2 class="section-title">To Future VISIONers</h2>
+      <div class="richtext">
+        <p>
+          <strong>VISION Lab</strong>에서는 함께 연구할 석/박사, 석박통합과정 학생들을 모집합니다. 학비 및 생활비 장학금을 지원합니다.
+          <strong>VISION Lab</strong>은 반도체 회로 분야 최고 학회인 <em>ISSCC</em>, <em>VLSI Symposium</em>, <em>JSSC</em>를 비롯하여,
+          <em>DAC</em>, <em>ICCAD</em> 등 digital SoC 학회, <em>AAAI</em>, <em>CVPR</em> 등 computer science 분야 최고 학회,
+          더 나아가 <em>nature</em> 자매지까지 다양한 분야의 최고 수준 학술 활동을 목표로 합니다.
+        </p>
+        <p>
+          창의적이고 열정적인 여러분과 함께 연구하여 지능형 비전 센서를 구현하고자 합니다. LiDAR 센서, CMOS Image Sensor 등 비전 센서 IC 설계,
+          스파이킹 신경망 아키텍처, mixed-signal 뉴로모픽 회로에 관심있는 학생들은 연락하세요.
+          (<a href="mailto:h.seo@pusan.ac.kr">h.seo@pusan.ac.kr</a>)
+        </p>
+        <p>
+          VISION Lab is now open for creative and self-motivated students (M.S, Ph.D).
+          Please contact prof. Seo (<a href="mailto:h.seo@pusan.ac.kr">h.seo@pusan.ac.kr</a>) for detailed information~!
+        </p>
+      </div>
+    </section>
+    <!-- News -->
+    <section class="container" >
+      <hr class="section-divider" />
+      <h2 class="section-title">Recent News & Highlights</h2>
+      <ul class="news-list">
+        <li><span class="date">08/20/2025</span> <strong>[INVITED TALK]</strong> Prof. Seo gave an invited talk titled
+          “Introduction to CMOS LiDAR Sensors” at RF Summer Conference.</li>
+        <li><span class="date">07/10/2025</span> <strong>[WORKSHOP]</strong> Prof. Seo and VISIONers participated in
+          Korea Image Sensor Workshop at Dongguk University.</li>
+        <li><span class="date">07/07/2025</span> <strong>[INVITED TALK]</strong> “Overview of CMOS LiDAR Sensors” at
+          IDEC PNU academy.</li>
+        <li><span class="date">07/01/2025</span> <strong>[RESEARCH]</strong> Mixed-signal Neuron & Synapse Circuits 프로젝트
+          시작.</li>
+        <li><span class="date">05/10/2025</span> <strong>[INVITED TALK]</strong> SoC Conference, Daegu University.</li>
+        <li><span class="date">04/01/2025</span> <strong>[RESEARCH]</strong> Versatile scanning LiDAR Sensor 프로젝트 시작.
+        </li>
+        <li><span class="date">03/01/2025</span> <strong>[WELCOME]</strong> New interns joined VISION LAB.</li>
+      </ul>
+
+      <hr class="section-divider light" />
+      <h3 class="section-title">Past News & Highlights</h3>
+      <ul class="news-list compact">
+        <li><span class="date">12/30/2024</span> <strong>[WELCOME]</strong> Youngjun Lee joined VISION LAB for
+          undergraduate internship.</li>
+        <li><span class="date">12/12/2024</span> <strong>[INVITED TALK]</strong> Ajou University.</li>
+        <li><span class="date">12/12/2024</span> <strong>[WELCOME]</strong> San Kim joined VISION LAB.</li>
+        <li><span class="date">12/04/2024</span> <strong>[WELCOME]</strong> Jeongmu Seo started pursuing M.S.</li>
+        <li><span class="date">11/26/2024</span> <strong>[WELCOME]</strong> Sihun Park, Byeonghun Choi joined VISION
+          LAB.</li>
+        <li><span class="date">09/01/2024</span> <strong>[WELCOME]</strong> Multiple new interns joined.</li>
+        <li><span class="date">08/20/2024</span> <strong>[INVITED TALK]</strong> CMOS Image Sensor IC Design.</li>
+      </ul>
+    </section>
+    <!-- MEMBERS (통합) -->
+    <section id="members" class="container" style="padding-top:20px">
+      <hr class="section-divider" />
+      <h2 class="section-title">VISIONers</h2>
+
+      <!-- Professor (상세 2열) -->
+      <section id="pi">
+        <h3 class="category-title">Professor</h3>
+
+        <div class="pi-columns">
+          <!-- 왼쪽: 사진/이름/연락처 -->
+          <aside class="member-card pi-card">
+            <img src="/image/서형석교수님.jpg" alt="Hyeongseok Seo" class="pi-photo" width="600" height="300">
+            <h4>서형석</h4>
+            <p class="subname-text">Hyeongseok Seo</p>
+            <hr class="pi-hr">
+
+            <ul class="pi-contacts">
+              <li>
+                <img src="/image/mail.jpg" alt="" class="icon">
+                <a href="mailto:h.seo@pusan.ac.kr">h.seo@pusan.ac.kr</a>
+              </li>
+              <li>
+                <img src="/image/linkedin.jpg" alt="" class="icon">
+                <a href="https://www.linkedin.com/in/%ED%98%95%EC%84%9D-%EC%84%9C-4545b2194/?originalSubdomain=kr"
+                  target="_blank" rel="noopener">linkedin</a>
+              </li>
+              <li>
+                <img src="/image/google.png" alt="" class="icon">
+                <a href="https://scholar.google.co.kr/citations?hl=ko&user=sYmSuUQAAAAJ" target="_blank"
+                  rel="noopener">google scholar</a>
+              </li>
+            </ul>
+          </aside>
+
+          <!-- 오른쪽: 프로필/수상/대표논문 -->
+          <div class="pi-right">
+            <section class="pi-block">
+              <h4 class="pi-h3">Profile</h4>
+              <ul class="pi-list">
+                <li><strong>2017</strong> B.S. Department of Semiconductor Systems Engineering, Sungkyunkwan University
+                </li>
+                <li><strong>2022</strong> Ph.D. Department of Electrical and Computer Engineering, Sungkyunkwan
+                  University</li>
+                <li><strong>2021–2024</strong> Team Leader, Next-Generation LiDAR Development Team, Solidvue</li>
+                <li><strong>2024~</strong> Assistant Professor, Dept. of Electrical and Computer Engineering, Pusan
+                  National University</li>
+              </ul>
+            </section>
+
+            <section class="pi-block">
+              <h4 class="pi-h3">Awards & Honors</h4>
+              <ul class="pi-list">
+                <li><strong>2021</strong> Highlighted Paper Selection, Symposium on VLSI 2020</li>
+                <li><strong>2020</strong> Minister of Trade, Industry, and Energy Award, Korea Semiconductor Design
+                  Competition</li>
+                <li><strong>2021</strong> Outstanding Researcher Award, Samsung Electronics Strategic Industry-Academia
+                  Program</li>
+                <li><strong>2020</strong> Outstanding Researcher Award, Samsung Electronics Strategic Industry-Academia
+                  Program</li>
+              </ul>
+            </section>
+
+            <section class="pi-block">
+              <h4 class="pi-h3">Representative Papers</h4>
+              <ul class="pi-list pi-papers">
+                <li>H. Seo*, H. Yoon, D. Kim, J. Kim, S.-J. Kim, J.-H. Chun, J. Choi, “Direct TOF scanning LiDAR sensor
+                  with two-step multievent histogramming TDC and embedded interference filter,” <em>IEEE JSSC</em>, Apr.
+                  2021.</li>
+                <li>M. Kim*, H. Seo*, S. Kim, J.-H. Chun, S.-J. Kim, J. Choi, “A 320×240 CMOS LiDAR Sensor with
+                  6-transistor nMOS-only SPAD AFE and Area-efficient Priority Histogram Memory,” in <em>ISSCC</em>,
+                  2024.</li>
+                <li>H. Seo*, G. Cho*, J. Kim, J. Bae, S.-J. Kim, J.-H. Chun, J. Choi, “A CMOS LiDAR Sensor with Pre-Post
+                  Weighted-Histogramming…,” in <em>SOVC</em>, Jun. 2021.</li>
+                <li>H. Seo*, H. Yoon, D. Kim, J. Kim, S.-J. Kim, J.-H. Chun, J. Choi, “A 36-Channel SPAD-Integrated
+                  Scanning LiDAR Sensor…,” in <em>SOVC</em>, Jun. 2020 (Highlighted).</li>
+                <li>H. Seo*, G. Cho, S.-J. Kim, J.-H. Chun, J. Choi, “Multievent Histogramming TDC with Pre-Post
+                  Weighted Histogramming Filter for CMOS LiDAR Sensors,” <em>IEEE Sensors J.</em>, Nov. 2022.</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- M.S. Students -->
+      <section class="member-category">
+        <h3 class="category-title">M.S. Students</h3>
+        <div class="members-grid">
+          <div class="member-card">
+            <img src="/image/서정무2.jpg" alt="JungMu Seo">
+            <h4>서정무</h4>
+            <p class="subname-text">JungMu Seo</p>
+            <div class="contact"><img src="/image/mail.jpg" alt="" class="icon"><span>202583324@pusan.ac.kr</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Undergraduate Students -->
+      <section class="member-category">
+        <h3 class="category-title">Undergraduate Students</h3>
+        <div class="members-grid">
+          <div class="member-card">
+            <img src="/image/김동욱.png" alt="DongUk Kim">
+            <h4>김동욱</h4>
+            <p class="subname-text">DongUk Kim</p>
+            <div class="contact"><img src="/image/mail.jpg" alt="" class="icon"><span>kimdudu@pusan.ac.kr</span></div>
+          </div>
+
+          <div class="member-card">
+            <img src="/image/김산2.jpg" alt="San Kim">
+            <h4>김산</h4>
+            <p class="subname-text">San Kim</p>
+            <div class="contact"><img src="/image/mail.jpg" alt="" class="icon"><span>rlatks0923@pusan.ac.kr</span>
+            </div>
+          </div>
+
+          <div class="member-card">
+            <img src="/image/민병언3.jpg" alt="ByeoungEon Min">
+            <h4>민병언</h4>
+            <p class="subname-text">ByeoungEon Min</p>
+            <div class="contact"><img src="/image/mail.jpg" alt="" class="icon"><span>evexiijnkmin@naver.com</span></div>
+          </div>
+
+          <div class="member-card">
+            <img src="/image/신지연2.jpg" alt="JiYeon Shin">
+            <h4>신지연</h4>
+            <p class="subname-text">JiYeon Shin</p>
+            <div class="contact"><img src="/image/mail.jpg" alt="" class="icon"><span>tls1089@pusan.ac.kr</span></div>
+          </div>
+
+          <div class="member-card">
+            <img src="/image/이우효2.jpg" alt="Woo-hyo Lee">
+            <h4>이우효</h4>
+            <p class="subname-text">Woo-hyo Lee</p>
+            <div class="contact"><img src="/image/mail.jpg" alt="" class="icon"><span>whlee0420@pusan.ac.kr</span></div>
+          </div>
+
+          <div class="member-card">
+            <img src="/image/진성희.png" alt="Seong-hui Jin">
+            <h4>진성희</h4>
+            <p class="subname-text">Seong-hui Jin</p>
+            <div class="contact"><img src="/image/mail.jpg" alt="" class="icon"><span>1923372@donga.ac.kr</span></div>
+          </div>
+
+          <div class="member-card">
+            <img src="/image/이영준.jpg" alt="YoungJun Lee">
+            <h4>이영준</h4>
+            <p class="subname-text">YoungJun Lee</p>
+            <div class="contact"><img src="/image/mail.jpg" alt="" class="icon"><span>lyj991022@naver.com</span></div>
+          </div>
+
+          <div class="member-card">
+            <img src="/image/서형석교수님.jpg" alt="ByeongHun Choi">
+            <h4>최병훈</h4>
+            <p class="subname-text">ByeongHun Choi</p>
+            <div class="contact"><img src="/image/mail.jpg" alt="" class="icon"><span>1923372@donga.ac.kr</span></div>
+          </div>
+        </div>
+        
+      </section>
+    </section>
+    
+    <!-- ================== RESEARCH ================== -->
+    <section id="research" class="container research">
+      <hr class="section-divider" />
+      <h2 class="section-title">Research</h2>
+
+      <!-- Hero -->
+      <div class="research-hero" style="--hero:url('/image/research1.png');"></div>
+
+      <!-- CMOS LiDAR Sensor -->
+      <h3 class="category-title">CMOS LiDAR Sensor</h3>
+
+      <div class="fig fig-2">
+        <figure>
+          <img src="/image/research2.png" alt="d-ToF overview">
+          <figcaption>Direct time-of-flight (d-ToF) schematic</figcaption>
+        </figure>
+        <div class="card">
+          <h4 class="card-title">How can we measure distance?</h4>
+          <ul class="bullet">
+            <li><strong>Direct time-of-flight method (d-ToF) :</strong></li>
+            <li>Directly measure time between laser emission and the arrival of its echo</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fig fig-2">
+        <figure>
+          <img src="/image/research3.png" alt="Mechanical Scanning LiDAR">
+          <figcaption>Mechanical Scanning LiDAR</figcaption>
+        </figure>
+        <figure>
+          <img src="/image/research4.png" alt="Solid-State Scanning (Electrical scanning) LiDAR">
+          <figcaption>Solid-State Scanning (Electrical scanning) LiDAR</figcaption>
+        </figure>
+      </div>
+
+      <!-- LiDAR Sensor IC Research Topics -->
+      <h3 class="category-title">LiDAR Sensor IC Research Topics</h3>
+
+      <div class="fig fig-2">
+        <figure>
+          <img src="/image/research5.png" alt="LiDAR Sensor IC block">
+          <figcaption>LiDAR Sensor IC – TX/RX/Controller overview</figcaption>
+        </figure>
+        <div class="card">
+          <ul class="bullet">
+            <li><strong>SPAD (Single-photon Avalanche diode)</strong><br>Device and process optimization with analog
+              front-end circuit design for single-photon detection.</li>
+            <li><strong>Time-to-digital converter (TDC)</strong><br>Sub-nanosecond precision TDC architectures with area
+              efficiency and array integration capability.</li>
+            <li><strong>Histogram memory</strong><br>Architectural optimization of memory systems that occupy majority
+              of LiDAR chip area.</li>
+            <li><strong>Depth calculator</strong><br>Advanced algorithms for accurate distance estimation under
+              non-linear responses and super-resolution processing.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:6px">
+        LiDAR sensor IC development requires comprehensive research across all aspects of electronics engineering, from
+        device-level optimization through analog circuits, digital circuits and architectures, to post-processing
+        algorithms!
+      </p>
+
+      <!-- Project 1 -->
+      <article class="project">
+        <h4 class="project-title">
+          1. VCSEL Scanning High-Resolution LiDAR Sensor with Area-Efficient SPAD AFE and Histogram Memory (ISSCC 2024)
+        </h4>
+
+        <div class="fig fig-2">
+          <div class="card">
+            <p>
+              This chip presents a high-resolution solid-state LiDAR sensor featuring a 320×240 pixel array with
+              innovative area-efficient design approaches.
+              The sensor implements a compact 6-transistor nMOS-only SPAD analog front-end (AFE) circuit with
+              column-shared active recharging, achieving 5ns dead time while minimizing pixel area.
+              A novel priority histogram memory architecture reduces memory requirements to 1/16, selectively storing
+              only high-probability echo candidates. The 2-step histogramming TDC enables efficient 2-echo detection
+              with reconfigurable memory allocation for both coarse and fine measurements.
+            </p>
+            <h5 class="card-title" style="margin-top:10px">Key Contributions:</h5>
+            <ul class="bullet">
+              <li>Area-efficient 6-transistor SPAD pixel design</li>
+              <li>Significant memory reduction through priority histogram memory</li>
+              <li>98.6% detection success rate under 100klx ambient light</li>
+              <li>5.7cm depth accuracy with 0.02% precision at 48m range</li>
+            </ul>
+          </div>
+          <figure>
+            <img src="/image/research6.png" alt="Project 1 figures">
+            <figcaption>320(V) × 240(H) pixel array &amp; priority histogram memory</figcaption>
+          </figure>
+        </div>
+
+        <div class="fig fig-2">
+          <figure>
+            <img src="/image/research7.png" alt="Proj2 fig 1">
+            <figcaption>Chip micrograph</figcaption>
+          </figure>
+          <figure>
+            <img src="/image/research8.png" alt="Proj2 fig 2">
+            <figcaption>Depth images / interference scenes</figcaption>
+          </figure>
+          
+        </div>
+
+        <div class="fig fig-1">
+          <figure>
+            <video class="media" autoplay muted loop playsinline preload="metadata" poster="/image/point_cloud_poster.jpg">
+              <source src="/image/point_cloud.mp4" type="video/mp4">
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+            <figcaption>Demo frames</figcaption>
+          </figure>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project">
+        <h4 class="project-title">
+          2. CMOS LiDAR Sensor with Enhanced Noise Immunity (S.VLSI 2021 / IEEE Sensors 2022)
+        </h4>
+
+        <div class="fig fig-2">
+          <div class="card">
+            <p>
+              This chip addresses critical challenges in LiDAR systems operating under harsh conditions with high
+              background noise and inter-LiDAR interference.
+              The sensor implements a multi-event weighted histogramming TDC with 4×4 macro-pixels and an area-efficient
+              11-bit two-step TDC architecture using mixed-signal accumulators.
+              A novel pre-post weighted histogram filter selectively detects time-correlated signals while rejecting
+              background noise from sunlight and dark counts.
+              Additionally, an infinite interference canceling (IIC) scheme with pulse-position and time-difference
+              modulation enables robust operation in multi-LiDAR environments using on-chip SPAD-based random number
+              generation.
+            </p>
+            <h5 class="card-title" style="margin-top:10px">Key Contributions:</h5>
+            <ul class="bullet">
+              <li>Area-efficient histogramming architecture with enhanced dynamic range</li>
+              <li>Effective background noise and interference mitigation</li>
+              <li>8.08-cm accuracy at 32m range under extreme conditions (105-klx sunlight)</li>
+            </ul>
+          </div>
+          <figure>
+            <img src="/image/research9.png" alt="Project 1 figures">
+            <figcaption>Outdoor results / interference scenes</figcaption>
+          </figure>
+        </div>
+
+        <!-- 여기 3장이라 fig-3로 수정 -->
+        <div class="fig fig-2">
+          <figure>
+            <img src="/image/research10.png" alt="Proj2 TDC">
+            <figcaption>5b Coarse TDC w/ shift reg. + 6b Fine TDC w/ DLL</figcaption>
+          </figure>
+          <figure>
+            <img src="/image/research11.png" alt="Proj2 circuits">
+            <figcaption>Pre-/Post-histogram mixed-signal accumulators</figcaption>
+          </figure>
+        </div>
+        <div class="fig fig-1">
+          <figure>
+            <img src="/image/research13.png" alt="Proj2 interference">
+            <figcaption>Interference canceling results</figcaption>
+          </figure>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project">
+        <h4 class="project-title">
+          3. 36-Channel Mechanical Scanning LiDAR Sensor with On-chip SPAD Array (S.VLSI 2020 / JSSC 2021) - Korea's 1st
+          LiDAR Sensor SoC
+        </h4>
+        <div class="fig fig-2">
+          <div class="card">
+            <p>
+              This chip features a compact scanning LiDAR sensor with a 36-channel SPAD array and area-efficient 11-bit
+              in-situ histogramming TDC (3000 × 78 µm² per channel).
+              The system incorporates an embedded interference filter enabling reliable operation even with interference
+              from 32 different LiDAR sensors.
+              Combined with dual laser diodes and hybrid mirror beam scanner, the sensor achieves high-resolution
+              imaging (2200 × 36) with wide field-of-view (120° × 8°).
+            </p>
+            <h5 class="card-title" style="margin-top:10px">Key Contributions:</h5>
+            <ul class="bullet">
+              <li>Area-efficient mixed-signal all-event histogramming TDC architecture</li>
+              <li>Robust interference filtering for multi-LiDAR environments</li>
+            </ul>
+          </div>
+          <figure>
+            <img src="/image/research14.png" alt="Project 3 figures">
+            <figcaption>Interference cancelling results</figcaption>
+          </figure>
+        </div>
+
+        <div class="fig fig-1">
+          <figure>
+            <img src="/image/research15.png" alt="Proj3 pixel/frontend">
+            <figcaption>Pixels and pixel front-end circuits</figcaption>
+          </figure>
+        </div>
+        <div class="fig fig-1">
+          <figure>
+            <img src="/image/research16.png" alt="Proj3 panorama">
+            <figcaption>2200 × 36 panorama (FOV 120° × 8°)</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Neuromorphic -->
+      <br>
+      <div class="research-hero" style="--hero:url('/image/research17.png');"></div>
+      <h3 class="category-title">Neuromorphic IC</h3>
+
+      <div class="fig fig-2" style="margin-top:12px">
+        <figure>
+          <img src="/image/research18.png" alt="Coming soon image">
+          <figcaption>Neuromorphic Vision Sensor teaser</figcaption>
+        </figure>
+        <div class="card">
+          <h4 class="card-title">Neuromorphic Vision Sensor - Coming Soon!</h4>
+          <p>
+            This exciting research area is still brewing in our lab! 🧪⚡️<br>
+            Stay tuned for groundbreaking results combining biological inspiration with cutting-edge circuit design. The
+            best is yet to come!<br>
+            <strong>"Great things take time, and we're cooking up something amazing!"</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ================== /RESEARCH ================== -->
+
+    <!-- ================== PUBLICATIONS ================== -->
+    <section id="publication" class="container publications">
+      <hr class="section-divider" />
+      <h2 class="section-title">Publications</h2>
+      <!-- Conference Papers -->
+      <h3 class="pub-cat">• Conference Papers</h3>
+      <ol class="pub-list">
+        <li>
+          W Roh*, H Seo, C Piao, H Lee, M Kim, MJ Lee, SJ Kim, JH Chun, J Choi*,
+          "A 400×112 CMOS LiDAR Sensor with Reconfigurable-Resolution Histogramming Time-to-Digital Converters and
+          Sub-cm Depth Refining Filter"<br>
+          <a href="#" class="pub-venue"><em>IEEE Asian Solid-State Circuits Conference (A-SSCC)</em>, Oct. 2024</a>
+        </li>
+        <li>
+          M Kim*, H Seo*, S Kim, JH Chun, SJ Kim, J Choi*,
+          "A 320x240 CMOS LiDAR Sensor with 6-Transistor nMOS-Only SPAD Analog Front-End and Area-Efficient Priority
+          Histogram Memory"<br>
+          <a href="#" class="pub-venue"><em>IEEE International Solid-State Circuits Conference (ISSCC)</em>, Feb.
+            2024</a>
+        </li>
+        <li>
+          S Park*, H Seo, C Piao, J Park, J Choi, JH Chun, J Choi*,
+          "System-Level Simulation of a SPAD-Based Time-of-Flight Sensor in SystemVerilog"<br>
+          <a href="#" class="pub-venue"><em>Design and Verification Conference &amp; Exhibition Europe (DVCon
+              Europe)</em>, Nov. 2023</a>
+        </li>
+        <li>
+          H Seo*, G Cho*, J Kim, J Bae, SJ Kim, JH Chun, J Choi*,
+          "A CMOS LiDAR sensor with pre-post weighted-histogramming for sunlight immunity over 105 klx and SPAD-based
+          infinite interference canceling "<br>
+          <a href="#" class="pub-venue"><em>IEEE Symposium on VLSI Circuits (VLSIC)</em>, Jun. 2021</a>
+        </li>
+        <li>
+          H Seo*, H Yoon, D Kim, J Kim, SJ Kim, JH Chun, J Choi*,
+          "A 36-channel SPAD-integrated scanning LiDAR sensor with multi-event histogramming TDC and embedded
+          interference filter" -
+          <strong>First LiDAR Sensor IC in Korea</strong><br>
+          <a href="#" class="pub-venue"><em>IEEE Symposium on VLSI Circuits (VLSIC)</em>, Jun. 2020</a>
+        </li>
+      </ol>
+
+      <!-- Journal Papers -->
+      <h3 class="pub-cat">• Journal Papers</h3>
+      <ol class="pub-list">
+        <li>
+          W Roh*, H Seo, C Piao, M Kim, T Jeon, H Lee, MJ Lee, JH Chun, SJ Kim, J Choi*,
+          "A High-Resolution Solid-State LiDAR Sensor With Reconfigurable Histogramming Time-to-Digital Converter and
+          Filter for Depth Refinement"<br>
+          <a href="#" class="pub-venue"><em>IEEE Journal of Solid-State Circuits (JSSC)</em>, Jun. 2025</a>
+        </li>
+        <li>
+          H Seo*, G Cho, SJ Kim, JH Chun, J Choi*,
+          "Multievent histogramming TDC with pre–post weighted histogramming filter for CMOS LiDAR sensors"<br>
+          <a href="#" class="pub-venue"><em>IEEE Sensors Journal</em>, Nov. 2022</a>
+        </li>
+        <li>
+          H Seo*, H Yoon, D Kim, J Kim, SJ Kim, JH Chun, J Choi*,
+          "Direct TOF scanning LiDAR sensor with two-step multievent histogramming TDC and embedded interference
+          filter"<br>
+          <a href="#" class="pub-venue"><em>IEEE Journal of Solid-State Circuits (JSSC)</em>, Mar. 2021</a>
+        </li>
+        <li>
+          H Seo*, J Choi*,
+          "Histogram-based mixed-signal time-to-digital-converter array for direct time-of-flight depth sensors"<br>
+          <a href="#" class="pub-venue"><em>Electronics Letters</em>, Mar. 2019</a>
+        </li>
+        <li>
+          H Seo*, B Kim, JH Chun, SJ Kim, J Choi*,
+          "CMOS depth sensor with programmable filter circuits for environment-adaptive noise suppression"<br>
+          <a href="#" class="pub-venue"><em>Electronics Letters</em>, Sep. 2018</a>
+        </li>
+      </ol>
+    </section>
+    <!-- ================== /PUBLICATIONS ================== -->
+
+
+
+
+
+    <!-- Photos anchor only (실제 갤러리는 추후) -->
+    <section id="photos" class="container">
+      <hr class="section-divider" />
+      <h2 class="section-title">Photos</h2>
+      <p class="muted">갤러리는 추후 추가 예정입니다.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> VISION LAB. All rights reserved.</span>
+      <a href="#home" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script2.js"></script>
+</body>
+
+</html>
