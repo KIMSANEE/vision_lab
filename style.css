@@ -74,6 +74,56 @@ body{
 .hero-title span{font-family:Orbitron, sans-serif}
 .hero-sub{color:var(--muted); font-size:clamp(16px,2.2vw,18px)}
 
+@media not all {
+.home.hero{
+  padding: 36px 0 28px;            /* 위/아래 여백 */
+  text-align: center;
+  position: relative;
+}
+
+/* 좌우 마진 제외한 영역(컨테이너 폭 - 2*거터)만 배경을 깔기 위한 래퍼 */
+.hero-bgbox{
+  position: relative;
+  /* “컨테이너 최대폭”과 “브라우저폭-거터*2 중 더 작은 값”을 사용 */
+  max-width: min(var(--container), calc(100% - (var(--gutter) * 2)));
+  margin: 0 auto;                  /* 가운데 정렬 */
+  padding: 56px 24px;              /* 높이(세로 크기)는 패딩으로 결정 */
+  color: #fff;                     /* 배경 위 가독성 */
+  border-radius: var(--hero-radius);
+  overflow: clip;                  /* 배경/자식 넘침 방지 */
+  isolation: isolate;              /* 배경 z-index 격리 */
+  box-shadow: 0 10px 30px rgba(0,0,0,.12); /* 은은한 그림자(선택) */
+}
+
+/* 실제 배경은 ::before로 깔기 */
+.hero-bgbox::before{
+  content: "";
+  position: absolute;
+  inset: 0;                        /* 박스 전체 덮기 */
+  background:
+    linear-gradient(rgba(0,0,0,.32), rgba(0,0,0,.32)), /* 어둡게 */
+    url("/image/큰배경.png") center / cover no-repeat;/* ← 이미지 경로만 교체 */
+  z-index: -1;                     /* 텍스트 뒤로 */
+}
+
+/* 제목/부제는 네 기존 클래스 그대로 사용 */
+.hero-title{ font-size:clamp(28px,4.4vw,46px); font-weight:800; letter-spacing:-.02em; margin:8px 0 6px; }
+.hero-title span{ font-family: Orbitron, sans-serif; }
+.hero-sub{ color: #dbe3ef; font-size:clamp(16px,2.2vw,18px); } /* 살짝 밝게 조정해도 OK */
+
+/* (선택) 고정 비율을 원하면 aspect-ratio 사용 */
+@media (min-width: 768px){
+  /* 텍스트가 적어서 너무 낮아 보이면 주석 해제하고 사용
+  .hero-bgbox{
+    aspect-ratio: 21 / 9;          // 21:9 영화 비율
+    display: grid; place-items: center;
+    padding: 0;                     // aspect-ratio 쓸 땐 패딩 대신 중앙정렬
+  }
+  */
+}
+}
+
+
 .intro{display:grid; grid-template-columns: 320px 1fr; gap:28px; align-items:center; margin:40px auto}
 .intro-img{width:100%; height:auto; border-radius:14px; box-shadow:var(--shadow)}
 .intro-text p{line-height:1.7; color:var(--text)}
